@@ -188,11 +188,18 @@ body {
     padding-top: 30px;
     margin-top: 30px;
 
+    @media (max-width: 1024px) {
+      flex-direction: column;
+      justify-items: center;
+      align-items: center;
+      text-align: center;
+      gap: 10px;
+    }
+
     &-img {
       display: flex;
+      justify-content: center;
       align-items: center;
-      margin-right: 15px;
-      width: 10%;
 
       img {
         width: 80px;
@@ -223,7 +230,7 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 13%;
+      gap: 10px;
 
       &-minus {
         svg {
@@ -276,7 +283,10 @@ body {
       display: flex;
       align-items: center;
       justify-content: flex-end;
-      width: 4%;
+
+      @media (max-width: 1024px) {
+        justify-content: center;
+      }
 
       .button {
         border-color: darken($color: $gray-line, $amount: 10);
@@ -370,9 +380,15 @@ body {
   }
 
   &--empty {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     margin: 80px auto;
-    width: 620px;
+    max-width: 620px;
+    width: 100%;
     text-align: center;
+    padding: 5px;
 
     h2 {
       font-size: 36px;
@@ -394,13 +410,15 @@ body {
 
     img {
       display: block;
-      width: 300px;
+      max-width: 300px;
+      width: 100%;
       margin: 45px auto 60px;
     }
 
     .button--black {
       padding: 12px 0 14px;
-      width: 230px;
+      max-width: 230px;
+      width: 100%;
       margin: 0 auto;
       font-weight: 600;
       font-size: 18px;
